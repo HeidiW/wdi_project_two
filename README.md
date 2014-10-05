@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project Two
 
 **<span style="color:darkblue">Build a client based CRUD application that will consume a given API.</span>**
@@ -50,3 +51,9 @@ All of the code you write will be written only for the client-side. You will **N
 - Use the `db/schema.sql` file to create your tables
 - To start the server, in the directory run `rackup config.ru`. This will replace the `ruby server.rb` command we have been using thus far.
 - Use `console.rb` to ensure that your database is connected to the server
+=======
+wdi_project_two
+===============
+
+Project two for WDI August
+>>>>>>> 46091f877dcdaadc028a5f1c6c710f682066d3d4
