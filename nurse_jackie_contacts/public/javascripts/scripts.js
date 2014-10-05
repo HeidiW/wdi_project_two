@@ -77,12 +77,12 @@ newNursesButton.addEventListener("click", function() {
 
 var newDoctorsButton = document.getElementById("createdoctor");
 
-newDoctorsButton.addEventsListener("click", function() {
+newDoctorsButton.addEventListener("click", function() {
     var textbox = document.getElementById("newstaffdoctor");
     var text = textbox.value;
-    if(text != ""){
+    if(text != "") {
 
-        var listItem = document.creatElement("ul");
+        var listItem = document.createElement("ul");
         listItem.innerHTML = "<li>" + text + "</li>";
 
         var list = document.getElementById("createdoctorlist");
@@ -91,6 +91,35 @@ newDoctorsButton.addEventsListener("click", function() {
         textbox.value = ""
     }
 });
+
+var newAdministratorsButton = document.getElementById("createadministrator");
+
+newAdministratorsButton.addEventListener("click", function(){
+
+    var textbox = document.getElementById("newstaffadministrator");
+    var text = textbox.value;
+
+    if(text != "") {
+        var listItem = document.createElement("ul");
+        listItem.innerHTML = "<li>" + text + "</li>"
+
+        var listItem = document.getElementById("createadministratorlist");
+        list.appendChild(listItem);
+
+        textbox.value = ""
+    }
+});
+
+var newPharmacistsButton = document.getElementById("createpharmacist");
+
+newPharmacistsButton.addEventListener("click", function(){
+    var textbox = document.getElementById("newstaffpharmacist");
+    var text = textbox.value;
+
+    if(text != "") {
+        var listItem = document.createElement("ul")
+    }
+})
 
 // function addElToLanguages(text){
 // 	var list = document.getElementById("languages_list");
