@@ -103,7 +103,7 @@ newAdministratorsButton.addEventListener("click", function(){
         var listItem = document.createElement("ul");
         listItem.innerHTML = "<li>" + text + "</li>"
 
-        var listItem = document.getElementById("createadministratorlist");
+        var list = document.getElementById("createadministratorlist");
         list.appendChild(listItem);
 
         textbox.value = ""
@@ -117,9 +117,15 @@ newPharmacistsButton.addEventListener("click", function(){
     var text = textbox.value;
 
     if(text != "") {
-        var listItem = document.createElement("ul")
+        var listItem = document.createElement("ul");
+        listItem.innerHTML = "<li>" + text + "</li>"
+
+        var list = document.getElementById("createpharmacistlist");
+        list.appendChild(listItem);
+
+        textbox.value = ""
     }
-})
+});
 
 // function addElToLanguages(text){
 // 	var list = document.getElementById("languages_list");

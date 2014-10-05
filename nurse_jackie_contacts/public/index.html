@@ -36,12 +36,22 @@ button that moves a name from one list to another -->
 	<h2>Administrators</h2>
 	<input id="newstaffadministrator" form name="Add New Administrators" method ="POST" path="/contacts">
 	<div align ="left">
+		<button id="createadministrator" input type="text" size="30" value="Enter new doctor name">
+			<input type ="submit" value ="Submit"><br><br>
 	<button id="addadministrators">add administrators</button>
 	<ul id="administratorsul"></ul>
+	<div id="createadministratorlist">
+	</div>
 </div>
 <div id="pharmacists">
 	<h2>Pharmacists</h2>
+	<input id="newstaffpharmacist" form name ="Add New Pharmacists" method ="POST" path="/contacts">
+	<div align ="left">
+		<button id="createpharmacist" input type="text" size ="30" value ="Enter new pharmacist name">
+			<input type ="submit" value ="Submit"><br><br>
 	<button id="addpharmacists">add pharmacists</button><ul id="pharmacistsul"></ul>
+	<div id="createpharmacistlist">
+	</div>
 </div>
 
 <script src="./javascripts/scripts.js"></script>
