@@ -64,16 +64,32 @@ newNursesButton.addEventListener("click", function() {
 	var textbox = document.getElementById("newstaffnurse");
 	var text = textbox.value;
 	if(text != ""){
-                debugger
 
 		var listItem = document.createElement("ul");
 		listItem.innerHTML = "<li>" + text + "</li>";
 
-		var list = document.getElementById("list");
+		var list = document.getElementById("createnurselist");
 		list.appendChild(listItem);
 
 		textbox.value = ""
 	}
+});
+
+var newDoctorsButton = document.getElementById("createdoctor");
+
+newDoctorsButton.addEventsListener("click", function() {
+    var textbox = document.getElementById("newstaffdoctor");
+    var text = textbox.value;
+    if(text != ""){
+
+        var listItem = document.creatElement("ul");
+        listItem.innerHTML = "<li>" + text + "</li>";
+
+        var list = document.getElementById("createdoctorlist");
+        list.appendChild(listItem);
+
+        textbox.value = ""
+    }
 });
 
 // function addElToLanguages(text){
