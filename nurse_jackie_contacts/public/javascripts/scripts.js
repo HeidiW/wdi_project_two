@@ -65,10 +65,10 @@ newNursesButton.addEventListener("click", function() {
 	var text = textbox.value;
 	if(text != ""){
 
-		var listItem = document.createElement("ul");
+		var listItem = document.createElement("nursesul");
 		listItem.innerHTML = "<li>" + text + "</li>";
 
-		var list = document.getElementById("createnurselist");
+		var list = document.getElementById("nursesul");
 		list.appendChild(listItem);
 
 		textbox.value = ""
@@ -127,21 +127,59 @@ newPharmacistsButton.addEventListener("click", function(){
     }
 });
 
-// function addElToLanguages(text){
-// 	var list = document.getElementById("languages_list");
-// 	var language = document.createElement("li");
-// 	language.innerText = text;
-// 	list.appendChild(language);
-// };
+var deleteNurseButton = document.getElementById("delete_nurses")
 
-//  function renderMovie(imageSrc, title) {
-//       var div = document.querySelector('div#results');
-//       var img = document.createElement('img');
-//       img.src = imageSrc;
+deleteNurseButton.addEventListener("click", function() {
+    var deleteNursesInput = document.getElementById("nurse_delete_button");
+    var text = deleteNursesInput.value;
 
-//       var titleElement = document.createElement('h3');
-//       titleElement.innerText = title;
+    var list = document.getElementById("nursesul");
+    console.log(list);
+    var listItems = list.children;
+    console.log(listItems);
 
-//       div.appendChild(titleElement);
-//       div.appendChild(img);
-//     }
+    for( var i = 0; i < listItems.length; i++){
+        var listItem = listItems[i];
+        var nurseName = listItem.innerText; 
+        if (nurseName == text) {
+            listItem.parentNode.removeChild(listItem);
+        };
+    }
+    deleteNursesInput.value = ""; 
+});
+
+var deleteDoctorButton = document.getElementById("delete_doctors")
+
+deleteDoctorButton.addEventListener("click", function(){
+    var deleteDoctorsInput = document.getElementById("doctor_delete_button");
+    var text = deleteDoctorsInput.value;
+
+    var list = document.getElementById("doctorsul");
+    console.log(list);
+    var listItems = list.children;
+    console.log(listItems);
+
+    for( var i = 0; i < listItems.length; i++){
+        var listItem = listItems[i];
+        var doctorName = listItem.innerText;
+        if (doctorName == text) {
+            listItem.parentNode.removeChild(listItem);
+        };
+    }
+    deleteDoctorsInput.value = "";
+
+});
+    /*var delete_nurses = document.querySelector('ul.nurses li')
+    var removeNurse = function() {
+      nurse.parentElement.removeChild(nurse);
+    }
+
+    delete_nurses.addEventListener('click', removeNurse);
+    var removeElement = function(delete_nurses) {
+      list.parentElement.removeChild(nursesul);
+    };
+
+
+*/
+
+

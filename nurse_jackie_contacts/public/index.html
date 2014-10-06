@@ -11,12 +11,12 @@ button that moves a name from one list to another -->
 <body>
 	<div id="nurses">
 	<h2>Nurses</h2>
-    <input id ="newstaffnurse" form name ="Add New Nurses" method ="POST" path ="/contacts" >
     	<div align ="left">
-    		<button id ="createnurse" input type="text" size="30" value ="Enter new nurse name">
-    		<input type="submit" value="Submit"><br>
+    		<button id="addbutton">list nurses</button>
+	        <br>
+    	<input id ="newstaffnurse" form name ="Add New Nurses" value ="Nurse name add" method ="POST" path ="/index"><button id ="createnurse" input type ="text" size ="30" value ="Add new nurse">add new nurse</button>
     		<br>
-	<button id="addbutton">list nurses</button>
+	    <input id ="nurse_delete_button" form name ="Delete Nurses" value ="Nurse name delete" method ="DELETE" path ="/index"><button id ="delete_nurses" input type ="text" size ="30" value ="Remove nurse">delete nurse</button>
 	<ul id="nursesul"></ul>
 	<div id="createnurselist">
 	</div>
@@ -28,6 +28,7 @@ button that moves a name from one list to another -->
 		<button id="createdoctor" input type="text" size="30" value ="Enter new doctor name">
 			<input type ="submit" value="Submit"><br><br>
 	<button id="adddoctor">list doctors</button>
+	<input id ="doctor_delete_button" form name ="Delete Doctors" value = "Doctor name delete" method ="DELETE" path ="/index"><button id ="delete_doctors" input type ="text" size ="30" value ="Remove doctor">delete doctor</button>
 	<ul id="doctorsul"></ul>
 	<div id="createdoctorlist">
 	</div>
