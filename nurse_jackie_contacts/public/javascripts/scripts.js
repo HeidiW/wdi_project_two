@@ -5,7 +5,7 @@ var doctors = ["Fitch Cooper", "Elenor O'Hara", "Carrie Roman"];
 var administrators = ["Gloria Akalitus"];
 var pharmacists = ["Eddie Walzer"]
 
-var addNursesButton = document.getElementById('addbutton');
+var addNursesButton = document.getElementById('listnursesbutton');
 
 addNursesButton.addEventListener("click", function(){
 	var nursediv = document.getElementById("nurses");
@@ -19,7 +19,7 @@ addNursesButton.addEventListener("click", function(){
     }
 });
 
-var addDoctorsButton = document.getElementById('adddoctor');
+var addDoctorsButton = document.getElementById('listdoctorsbutton');
 addDoctorsButton.addEventListener("click", function(){
 	var doctordiv = document.getElementById("doctors");
 	var ul = document.getElementById('doctorsul');
@@ -32,18 +32,18 @@ addDoctorsButton.addEventListener("click", function(){
     }
 });
 
-var addAdministratorsButton = document.getElementById('addadministrators');
-addAdministratorsButton.addEventListener("click", function(){
-	var administratordiv = document.getElementById("administrators");
-	var ul = document.getElementById('administratorsul');
+// var addAdministratorsButton = document.getElementById('listadministratorsbutton');
+// addAdministratorsButton.addEventListener("click", function(){
+// 	var administratordiv = document.getElementById("administrators");
+// 	var ul = document.getElementById('administratorsul');
 
-    for (var i = 0; i < administrators.length; i++) {
-    	var listItem = document.createElement("li");
-    	var administrator = administrators[i]
-    	listItem.innerText = administrator;
-        ul.appendChild(listItem);
-    }
-});
+//     for (var i = 0; i < administrators.length; i++) {
+//     	var listItem = document.createElement("li");
+//     	var administrator = administrators[i]
+//     	listItem.innerText = administrator;
+//         ul.appendChild(listItem);
+//     }
+// });
 
 var addPharmacistsButton = document.getElementById('addpharmacists');
 addPharmacistsButton.addEventListener("click", function(){
@@ -59,14 +59,14 @@ addPharmacistsButton.addEventListener("click", function(){
 });
 
 var newNursesButton = document.getElementById("createnurse");
-
 newNursesButton.addEventListener("click", function() {
 	var textbox = document.getElementById("newstaffnurse");
 	var text = textbox.value;
+
 	if(text != ""){
 
-		var listItem = document.createElement("nursesul");
-		listItem.innerHTML = "<li>" + text + "</li>";
+		var listItem = document.createElement("li");
+		listItem.innerHTML = text;
 
 		var list = document.getElementById("nursesul");
 		list.appendChild(listItem);
@@ -82,10 +82,10 @@ newDoctorsButton.addEventListener("click", function() {
     var text = textbox.value;
     if(text != "") {
 
-        var listItem = document.createElement("ul");
-        listItem.innerHTML = "<li>" + text + "</li>";
+        var listItem = document.createElement("li");
+        listItem.innerHTML = text;
 
-        var list = document.getElementById("createdoctorlist");
+        var list = document.getElementById("doctorsul");
         list.appendChild(listItem);
 
         textbox.value = ""
@@ -127,16 +127,12 @@ newPharmacistsButton.addEventListener("click", function(){
     }
 });
 
-var deleteNurseButton = document.getElementById("delete_nurses")
-
+var deleteNurseButton = document.getElementById("delete_nurses");
 deleteNurseButton.addEventListener("click", function() {
     var deleteNursesInput = document.getElementById("nurse_delete_button");
     var text = deleteNursesInput.value;
-
     var list = document.getElementById("nursesul");
-    console.log(list);
     var listItems = list.children;
-    console.log(listItems);
 
     for( var i = 0; i < listItems.length; i++){
         var listItem = listItems[i];
@@ -169,6 +165,29 @@ deleteDoctorButton.addEventListener("click", function(){
     deleteDoctorsInput.value = "";
 
 });
+
+// var deleteAdministratorButton = document.getElementById("delete_pharmacists")
+
+// deleteAdministratorButton.addEventListener("click", function(){
+//     var deleteAdministratorsInput = document.getElementById("administrator_delete_button")
+//     var text = deleteAdministratorsInput.value;
+
+//     var list = document.getElementById("administratorsul");
+//     console.log(list);
+//     var listItems = list.children;
+//     console.log(listItems);
+
+//     for( var i = 0; i < listItems.length; i++){
+//         var listItem = listItem[i];
+//         var administratorName = listItem.innerText;
+//         if (administratorName == text) {
+//                 listItem.parentNode.removeChild(listItem);
+//             };
+//         }
+//         deleteAdministratorsInput.value = "";
+// });
+
+
     /*var delete_nurses = document.querySelector('ul.nurses li')
     var removeNurse = function() {
       nurse.parentElement.removeChild(nurse);

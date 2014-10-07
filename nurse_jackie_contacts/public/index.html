@@ -1,65 +1,62 @@
-<!-- buttons that add names to a list
-delete names from a list
-button that moves a name from one list to another -->
 <html>
-<head>
-<link rel="stylesheet" href="./stylesheets/styles.css">
-<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+ <head>
+	<link rel="stylesheet" href="./stylesheets/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 	<title>Nurse Jackie Contacts</title>
 	<h1>All Saints Hospital Staff Contact List</h1>
-</head>
-<body>
-	<div id="nurses">
-	<h2>Nurses</h2>
-    	<div align ="left">
-    		<button id="addbutton">list nurses</button>
-	        <br>
-    	<input id ="newstaffnurse" form name ="Add New Nurses" value ="Nurse name add" method ="POST" path ="/index"><button id ="createnurse" input type ="text" size ="30" value ="Add new nurse">add new nurse</button>
-    		<br>
-	    <input id ="nurse_delete_button" form name ="Delete Nurses" value ="Nurse name delete" method ="DELETE" path ="/index"><button id ="delete_nurses" input type ="text" size ="30" value ="Remove nurse">delete nurse</button>
-	<ul id="nursesul"></ul>
-	<div id="createnurselist">
+	</head>
+	<body>
+<div id="nurses">
+<h2>Nurses</h2>
+	 <div align ="left">
+<button id="listnursesbutton">list nurses</button>
+	<br>
+		<input id ="newstaffnurse" form name ="Add New Nurses" value ="Nurse name add" method ="POST" path ="/index"><button id ="createnurse" input type ="text" size ="30" value ="Add new nurse">add new nurse</button>
+	<br>
+		<input id ="nurse_delete_button" form name ="Delete Nurses" value ="Nurse name delete" method ="DELETE" path ="/index"><button id ="delete_nurses" input type ="text" size ="30" value ="Remove nurse">delete nurse</button>
+<ul id="nursesul"></ul>
+<div id="createnurselist">
 	</div>
-</div>
+	</div>
 <div id="doctors">
-	<h2>Doctors</h2>
-	<input id="newstaffdoctor" form name ="Add New Doctors" method ="POST" path ="/contacts">
+<h2>Doctors</h2>
 	<div align ="left">
-		<button id="createdoctor" input type="text" size="30" value ="Enter new doctor name">
-			<input type ="submit" value="Submit"><br><br>
-	<button id="adddoctor">list doctors</button>
-	<input id ="doctor_delete_button" form name ="Delete Doctors" value = "Doctor name delete" method ="DELETE" path ="/index"><button id ="delete_doctors" input type ="text" size ="30" value ="Remove doctor">delete doctor</button>
-	<ul id="doctorsul"></ul>
-	<div id="createdoctorlist">
+	<button id="listdoctorsbutton">list doctors</button>
+	<br>
+		<input id ="newstaffdoctor" form name ="Add New Doctors" value ="Doctor name add" method ="POST" path ="/index"><button id="createdoctor" input type="text" size="30" value ="Add new doctor">add new doctor</button>
+	<br>
+		<input id ="doctor_delete_button" form name ="Delete Doctors" value = "Doctor name delete" method ="DELETE" path ="/index"><button id ="delete_doctors" input type ="text" size ="30" value ="Remove doctor">delete doctor</button>
+	  <ul id="doctorsul"></ul>
+	  <div id="createdoctorlist">
 	</div>
-</div>
-<div id="administrators">
-	<h2>Administrators</h2>
-	<input id="newstaffadministrator" form name="Add New Administrators" method ="POST" path="/contacts">
+	</div>
+	<div id="administrators">
+<h2>Administrators</h2>
+		<input id="newstaffadministrator" form name="Add New Administrators" method ="POST" path="/contacts">
 	<div align ="left">
-		<button id="createadministrator" input type="text" size="30" value="Enter new doctor name">
-			<input type ="submit" value ="Submit"><br><br>
-	<button id="addadministrators">add administrators</button>
-	<ul id="administratorsul"></ul>
-	<div id="createadministratorlist">
+	<button id="createadministrator" input type="text" size="30" value="Enter new doctor name">
+		<input type ="submit" value ="Submit"><br><br>
+		<button id="addadministrators">add administrators</button>
+		<ul id="administratorsul"></ul>
+		<div id="createadministratorlist">
 	</div>
-</div>
-<div id="pharmacists">
+	</div>
+	<div id="pharmacists">
 	<h2>Pharmacists</h2>
 	<input id="newstaffpharmacist" form name ="Add New Pharmacists" method ="POST" path="/contacts">
 	<div align ="left">
-		<button id="createpharmacist" input type="text" size ="30" value ="Enter new pharmacist name">
-			<input type ="submit" value ="Submit"><br><br>
+	<button id="createpharmacist" input type="text" size ="30" value ="Enter new pharmacist name">
+	<input type ="submit" value ="Submit"><br><br>
 	<button id="addpharmacists">add pharmacists</button><ul id="pharmacistsul"></ul>
 	<div id="createpharmacistlist">
 	</div>
-</div>
+	</div>
 
-<script src="./javascripts/scripts.js"></script>
+	<script src="./javascripts/scripts.js"></script>
 
-</script>
+	</script>
 
-</body>
+	</body>
 
-</html>
+	</html>
 
